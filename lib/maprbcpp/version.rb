@@ -1,5 +1,3 @@
-module Map
-  module Rbcpp
-    VERSION = "0.9.0"
-  end
+module MapRbcpp
+  VERSION = "0.9.0"
 end

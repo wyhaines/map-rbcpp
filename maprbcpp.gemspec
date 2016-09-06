@@ -5,7 +5,7 @@ require 'maprbcpp/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "maprbcpp"
-  spec.version       = Map::Rbcpp::VERSION
+  spec.version       = MapRbcpp::VERSION
   spec.authors       = ["Kirk Haines"]
   spec.email         = ["wyhaines@gmail.com"]
 
@@ -16,9 +16,9 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  spec.extensions = %w[ext/maprbcpp/extconf.rb]
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.extensions    = %w[ext/maprbcpp/extconf.rb]
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
