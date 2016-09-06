@@ -195,8 +195,6 @@ static VALUE sptm_inspect (VALUE self)
         VALUE arrow = rb_str_new2("=>");
         VALUE comma = rb_str_new2(",");
 
-        cout << "*1\n";
-
         rb_map* st = NULL;
         rb_map_iterator q_iterator;
         rb_map_iterator last_q_iterator;
@@ -205,14 +203,11 @@ static VALUE sptm_inspect (VALUE self)
         if (!st)
                 rb_raise (rb_eException, "No Map Object");
 
-        cout << "*1\n";
         if (!((*st).end() == (*st).begin())) {
                 before_last_q_iterator = last_q_iterator = (*st).end();
                 before_last_q_iterator--;
 
-                cout << "*1\n";
                 for ( q_iterator = (*st).begin(); q_iterator != last_q_iterator; q_iterator++ ) {
-                        cout << "*1\n";
                         rb_str_concat(s,rb_inspect(rb_str_new2((*q_iterator).first)));
                         rb_str_concat(s,arrow);
                         rb_str_concat(s,rb_inspect((*q_iterator).second));

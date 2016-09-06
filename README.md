@@ -1,8 +1,8 @@
-# Map::Rbcpp
+# Maprbcpp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/map/rbcpp`. To experiment with that code, run `bin/console` for an interactive prompt.
+  Maps are associative containers which store values, indexed by key, but which provide ordered access to the values, sorted by the key. This implementation wraps the standard implementation found in C++.
 
-TODO: Delete this and the text above, and describe your gem
+  This implementation has been in my toolbox for a very long time, and the API is in definite need of some love to make it fully Hash compatible.
 
 ## Installation
 
@@ -22,7 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'maprbcpp'
+
+m = Maprbcpp.new
+m['z'] = 26
+m['a'] = 1
+
+pp m
+
+ => {"a"=>1,"z"=>26}
+```
+
+A subset of the Hash API is currently implemented.
 
 ## Development
 
