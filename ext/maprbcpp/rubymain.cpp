@@ -464,9 +464,9 @@ static VALUE sptm_values (VALUE self)
    Init_sptm
 **********************/
 
-extern "C" void Init_map()
+extern "C" void Init_maprbcpp()
 {
-        MapClass = rb_define_class("MapRbcpp", rb_cObject);
+        MapClass = rb_define_class("Maprbcpp", rb_cObject);
 
         rb_define_module_function (MapClass, "new", (VALUE (*)(...))sptm_new, 0);
         rb_define_method (MapClass, "shift", (VALUE (*)(...))sptm_pop_front,0);
