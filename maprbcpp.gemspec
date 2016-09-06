@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'maprbcpp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "map-rbcpp"
+  spec.name          = "maprbcpp"
   spec.version       = Map::Rbcpp::VERSION
   spec.authors       = ["Kirk Haines"]
   spec.email         = ["wyhaines@gmail.com"]
